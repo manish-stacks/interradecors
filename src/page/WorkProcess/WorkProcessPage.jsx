@@ -2,7 +2,7 @@ import React from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 
-const Projects = () => {
+const WorkProcess = () => {
   return (
     <>
       <Breadcrumb />
@@ -15,4 +15,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default WorkProcess;

@@ -63,7 +63,7 @@ const primaryNav = [
   },
   {
     title: "Work Process",
-    href: "#",
+    href: "/work-process",
   },
   {
     title: "Blog",
@@ -75,17 +75,46 @@ const primaryNav = [
   },
 ];
 const subNav = [
-  "Curtains",
-  "Upholstery",
-  "Wallpaper",
-  "Blinds & Curtain Tracks",
-  "Motorized & Automation Solutions",
-  "Bed & Bath Linens",
-  "Mattresses",
-  "Rugs",
-  "Carpets",
-  "Wooden Flooring",
-  "Wall-to-Wall Carpets",
+  {
+    title: "Curtains",
+    href: "/all-products?category=curtains",
+  },
+  {
+    title: "Upholstery",
+    href: "/all-products?category=upholstery",
+  },
+  {
+    title: "Wallpaper",
+    href: "/all-products?category=wallpaper",
+  },
+  {
+    title: "Blinds & Curtain Tracks",
+    href: "/all-products?category=blinds-and-curtain-tracks",
+  },
+  {
+    title: "Motorized & Automation Solutions",
+    href: "/all-products?category=motorized-and-automation-solutions",
+  },
+  {
+    title: "Bed & Bath Linens",
+    href: "/all-products?category=bed-and-bath-linens",
+  },
+  {
+    title: "Mattresses",
+    href: "/all-products?category=mattresses",
+  },
+  {
+    title: "Rugs & Carpets",
+    href: "/all-products?category=rugs-and-carpets",
+  },
+  {
+    title: "Wooden Flooring",
+    href: "/all-products?category=wooden-flooring",
+  },
+  {
+    title: "Wall-to-Wall Carpets",
+    href: "/all-products?category=wall-to-wall-carpets",
+  }
 ];
 
 // ─── COMPONENT ────────────────────────────────────────────────────────────────
@@ -178,9 +207,9 @@ export default function DecorHeader() {
         {/* ── Sub Nav (desktop) ── */}
         <div className="dh-subnav">
           <div className="dh-subnav-inner">
-            {subNav.map((item) => (
-              <Link key={item} to="/all-products" className="dh-sub-link">
-                {item}
+            {subNav.map((item, index) => (
+              <Link key={index} to={item.href} className="dh-sub-link">
+                {item.title}
               </Link>
             ))}
           </div>
@@ -207,9 +236,9 @@ export default function DecorHeader() {
 
           {/* Sub nav as pills */}
           <div className="dh-mobile-sub">
-            {subNav.map((item) => (
-              <a key={item} href="#" onClick={(e) => e.preventDefault()}>
-                {item}
+            {subNav.map((item, index) => (
+              <a key={index} href={item.href} onClick={(e) => e.preventDefault()}>
+                {item.title}
               </a>
             ))}
           </div>

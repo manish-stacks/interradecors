@@ -13,6 +13,7 @@ import Checkout from "./page/Checkout/Checkout";
 import Projects from "./page/ProjectsPage/ProjectsPage";
 import Meeting from "./page/Meeting/Meeting";
 import Team from "./page/OurTeam/OurTeam";
+import WorkProcess from "./page/WorkProcess/WorkProcessPage";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/products/:slug" element={<ProductDetails />} />
           <Route path="/check-out" element={<Checkout />} />
           <Route path="/our-projects" element={<Projects />} />
+          <Route path="/work-process" element={<WorkProcess />} />
           <Route path="/book-a-meeting" element={<Meeting />} />
           <Route path="/our-team" element={<Team/>} />
         </Routes>

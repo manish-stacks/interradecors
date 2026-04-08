@@ -47,7 +47,7 @@ const OurServices = () => {
     <>
       <Breadcrumb />
 
-      <section className="oss">
+      <section className="oss max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {/* ── INTRO ── */}
         <div className="oss__intro">
@@ -120,7 +120,7 @@ const OurServices = () => {
         </div>
 
         {/* ── BOTTOM BAND ── */}
-        <div className="oss__band">
+        <div className="oss__band mb-12">
 
           {/* Ghost text */}
           <div className="oss__band-ghost" aria-hidden="true">

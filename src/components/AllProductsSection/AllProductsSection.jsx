@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AllProductsSection.css";
 
 import Pro01 from "../../assets/products/sheer-elegance-curtains.jpg"
@@ -185,10 +185,15 @@ const tagColors = {
 function toSlug(name) {
   return name
     .toLowerCase()
+    .replace(/&/g, "and")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 }
-
+function fromSlug(slug) {
+  return ALL_CATEGORIES.find(
+    (cat) => toSlug(cat) === slug
+  );
+}
 function discPct(p) {
   return Math.round(((p.price - p.discount) / p.price) * 100);
 }
@@ -358,13 +363,25 @@ function EnquiryModal({ product, onClose }) {
 }
 
 /* ── Main Component ── */
-const AllProductsSection = () => {
+const AllProductsSection = ({ category = "All" }) => {
   const [selCategories, setSelCategories] = useState(["All"]);
   const [priceMax, setPriceMax] = useState(35000);
   const [minRating, setMinRating] = useState(0);
   const [sortOpt, setSortOpt] = useState("default");
   const [viewMode, setViewMode] = useState("grid");
   const [enquiryProduct, setEnquiryProduct] = useState(null);
+
+  useEffect(() => {
+    if (category) {
+      const matchedCategory = fromSlug(category);
+
+      if (matchedCategory) {
+        setSelCategories([matchedCategory]);
+      } else {
+        setSelCategories(["All"]);
+      }
+    }
+  }, [category]);
 
   const toggleCat = (cat) => {
     if (cat === "All") {
@@ -423,9 +440,8 @@ const AllProductsSection = () => {
                 onClick={() => toggleCat(cat)}
               >
                 <span
-                  className={`aps-checkbox ${
-                    selCategories.includes(cat) ? "checked" : ""
-                  }`}
+                  className={`aps-checkbox ${selCategories.includes(cat) ? "checked" : ""
+                    }`}
                 >
                   {selCategories.includes(cat) && (
                     <span className="aps-tick">✓</span>
@@ -582,9 +598,8 @@ const AllProductsSection = () => {
                         ₹{p.price.toLocaleString("en-IN")}
                       </span>
                       <span
-                        className={`aps-stock-badge ${
-                          p.inStock ? "in-stock" : "out-stock"
-                        }`}
+                        className={`aps-stock-badge ${p.inStock ? "in-stock" : "out-stock"
+                          }`}
                       >
                         {p.inStock ? "In Stock" : "Out of Stock"}
                       </span>

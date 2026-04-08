@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./BlogSection.css";
-
+import Pro01 from "../../assets/products/sheer-elegance-curtains.jpg"
+import Pro02 from "../../assets/products/velvet-blackout-curtains.jpg"
+import Pro03 from "../../assets/products/linen-sofa-upholstery.jpg"
+import Pro04 from "../../assets/products/geometric-wallpaper.webp"
+import Pro05 from "../../assets/products/roman-blinds.jpg"
+import Pro06 from "../../assets/products/motorized-roller-blinds.jpg"
 const posts = [
   {
     id: 1,
@@ -10,6 +15,7 @@ const posts = [
     date: "Mar 10, 2025",
     readTime: "5 min read",
     title: "How to Choose the Right Flooring for Every Room",
+    image: Pro01,
     excerpt:
       "From high-traffic living areas to moisture-prone bathrooms — a guide to flooring that balances beauty, durability, and lifestyle.",
   },
@@ -21,6 +27,7 @@ const posts = [
     date: "Feb 24, 2025",
     readTime: "4 min read",
     title: "2025 Furniture Trends Defining Modern Interiors",
+    image: Pro02,
     excerpt:
       "Curved silhouettes, warm earth tones, and sustainable materials are reshaping how we furnish homes this year.",
   },
@@ -32,6 +39,7 @@ const posts = [
     date: "Feb 08, 2025",
     readTime: "6 min read",
     title: "Behind the Scenes: A 5-Star Hotel Furnishing Project",
+    image: Pro03,
     excerpt:
       "We take you inside a luxury resort project — from initial measurements to the final installation walkthrough.",
   },
@@ -43,6 +51,7 @@ const posts = [
     date: "Jan 20, 2025",
     readTime: "3 min read",
     title: "Veneer vs Solid Wood: Which Should You Choose?",
+    image: Pro04,
     excerpt:
       "Breaking down pros, cons, price points, and ideal use cases for two of the most popular furniture materials.",
   },
@@ -54,6 +63,7 @@ const posts = [
     date: "Jan 05, 2025",
     readTime: "4 min read",
     title: "10 Small Changes That Make a Big Difference in Any Room",
+    image: Pro05,
     excerpt:
       "Lighting, textures, and strategic placement — small upgrades that transform a space without a full renovation.",
   },
@@ -65,6 +75,7 @@ const posts = [
     date: "Dec 18, 2024",
     readTime: "5 min read",
     title: "The Rise of Modular Furniture in Commercial Spaces",
+    image: Pro06,
     excerpt:
       "How offices, hotels, and co-working spaces are embracing modular furnishing for flexibility and cost efficiency.",
   },
@@ -189,6 +200,7 @@ export default function BlogSection() {
             >
               {/* Dark header with pattern */}
               <div className="blog-card-top">
+                <img src={post.image} alt={post.title} className="blog-card-img" />
                 <CardPattern index={i} />
 
                 {/* Big ghost number */}
