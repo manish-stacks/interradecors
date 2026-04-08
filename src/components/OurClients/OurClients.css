@@ -1,0 +1,224 @@
+/* OurClients.css */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #b89450;
+    --secondary: #1a1814;
+}
+
+/* ══════════════════════════════
+   SECTION WRAPPER
+══════════════════════════════ */
+.our-clients-section {
+    display: flex;
+    flex-direction: row;
+    min-height: 560px;
+    background: #fafaf8;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+/* ══════════════════════════════
+   LEFT: IMAGE SLIDER
+══════════════════════════════ */
+.clients-images {
+    width: 34%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.img-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    z-index: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dot indicators */
+.slider-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary);
+    transform: scale(1.35);
+}
+
+/* ══════════════════════════════
+   RIGHT: CONTENT
+══════════════════════════════ */
+.clients-content {
+    flex: 1;
+    padding: 52px 56px 48px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title */
+.clients-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #c29e64;
+    letter-spacing: 0.06em;
+    margin: 0 0 36px 0;
+    display: inline-block;
+    padding: 4px 32px;
+    align-self: flex-end;
+    border-radius: 40px;
+    line-height: 1.2;
+}
+
+/* Grid */
+.clients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 48px;
+    margin-bottom: 36px;
+}
+
+.client-item h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 0 0 5px 0;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.client-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Homeowners highlight */
+.client-item.highlighted h3 {
+    background: rgb(200 168 75);
+    color: rgb(255 255 255);
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.client-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #222222;
+    line-height: 1.65;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Divider */
+.clients-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(184, 148, 80, 0.3);
+    margin-bottom: 28px;
+}
+
+/* Bottom text */
+.clients-bottom p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    color: #5a5652;
+    line-height: 1.8;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+}
+
+.clients-bottom p:last-child {
+    margin-bottom: 0;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 900px) {
+    .our-clients-section {
+        flex-direction: column;
+    }
+
+    .clients-images {
+        width: 100%;
+    }
+
+    .img-slider {
+        min-height: 300px;
+    }
+
+    .clients-content {
+        padding: 36px 28px 40px;
+    }
+
+    .clients-title {
+        font-size: 2.4rem;
+        align-self: flex-start;
+    }
+
+    .clients-grid {
+        gap: 20px 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img-slider {
+        min-height: 220px;
+    }
+
+    .client-item h3 {
+        font-size: 2.0rem;
+    }
+
+    .client-item p {
+        font-size: 0.8rem;
+    }
+}

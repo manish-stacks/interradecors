@@ -1,0 +1,272 @@
+import React, { useState } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Instagram,
+  Facebook,
+  Linkedin,
+  Youtube,
+  Send,
+  Lock,
+  ExternalLink,
+  CheckCircle,
+  MessageSquare,
+} from "lucide-react";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+import "./Contact.css";
+
+const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [sent, setSent] = useState(false);
+  const [toast, setToast] = useState(false);
+
+  const handle = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const submit = (e) => {
+    e.preventDefault();
+    setSent(true);
+    setToast(true);
+    setTimeout(() => setToast(false), 3500);
+  };
+
+  return (
+    <>
+      <Breadcrumb />
+
+      <div className="cp-page">
+        {/* ── HERO ── */}
+        <div className="cp-hero">
+          <div className="cp-hero-left">
+            <span className="cp-hero-tag">
+              <MessageSquare size={11} /> Let's Connect
+            </span>
+            <h1>
+              Let's Build  <em> Something </em> Together
+            </h1>
+          </div>
+          <div className="cp-hero-right">
+            <p className="cp-hero-desc">
+              Whether it's a dream home, a commercial space, or a hospitality
+              project — we'd love to hear from you and bring your vision to
+              life.
+            </p>
+          </div>
+        </div>
+
+        {/* ── MAIN GRID ── */}
+        <div className="cp-grid">
+          {/* LEFT COLUMN */}
+          <div className="cp-left">
+            {/* Contact Info Card */}
+            <div className="cp-info-card">
+              <h3>Contact Details</h3>
+
+              <div className="cp-detail">
+                <div className="cp-detail-icon">
+                  <Phone size={17} />
+                </div>
+                <div className="cp-detail-text">
+                  <label>Phone</label>
+                  <span>+91 99534 93794</span>
+                </div>
+              </div>
+
+              <div className="cp-detail">
+                <div className="cp-detail-icon">
+                  <Mail size={17} />
+                </div>
+                <div className="cp-detail-text">
+                  <label>Email</label>
+                  <span>vinghz1@gmail.com</span>
+                </div>
+              </div>
+
+              <div className="cp-detail">
+                <div className="cp-detail-icon">
+                  <MapPin size={17} />
+                </div>
+                <div className="cp-detail-text">
+                  <label>Address</label>
+                  <span>Shop No. 129, 1st Floor, Jmd Suburbio, 67, Badshahpur Sohna Rd, Sector 67, Gurugram, Haryana 122101</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Working Hours Card */}
+            <div className="cp-hours-card">
+              <h4>
+                <Clock size={15} /> Working Hours
+              </h4>
+              <div className="cp-hour-row">
+                <strong>Monday – Friday</strong>
+                <span>9:00 AM – 7:00 PM</span>
+              </div>
+              <div className="cp-hour-row">
+                <strong>Saturday</strong>
+                <span>10:00 AM – 5:00 PM</span>
+              </div>
+              <div className="cp-hour-row">
+                <strong>Sunday</strong>
+                <span>By Appointment</span>
+              </div>
+            </div>
+
+            {/* Social Card */}
+            <div className="cp-social-card">
+              <h4>Follow Us</h4>
+              <div className="cp-socials">
+                <a className="cp-social-btn" href="#" aria-label="Instagram">
+                  <Instagram size={16} />
+                </a>
+                <a className="cp-social-btn" href="#" aria-label="Facebook">
+                  <Facebook size={16} />
+                </a>
+                <a className="cp-social-btn" href="#" aria-label="LinkedIn">
+                  <Linkedin size={16} />
+                </a>
+                <a className="cp-social-btn" href="#" aria-label="YouTube">
+                  <Youtube size={16} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN */}
+          <div className="cp-right">
+            {/* Inquiry Form */}
+            <div className="cp-form-card">
+              <h3>Send an Inquiry</h3>
+              <p>We'll get back to you within 24 hours.</p>
+
+              <form onSubmit={submit}>
+                <div className="cp-form-row">
+                  <div className="cp-field">
+                    <label>Your Name</label>
+                    <input
+                      name="name"
+                      value={form.name}
+                      onChange={handle}
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+
+                  <div className="cp-field">
+                    <label>Email Address</label>
+                    <input
+                      name="email"
+                      type="email"
+                      value={form.email}
+                      onChange={handle}
+                      placeholder="you@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div className="cp-field">
+                    <label>Phone Number</label>
+                    <input
+                      name="phone"
+                      value={form.phone}
+                      onChange={handle}
+                      placeholder="+91 XXXXX XXXXX"
+                    />
+                  </div>
+
+                  <div className="cp-field">
+                    <label>Service Type</label>
+                    <select
+                      name="service"
+                      value={form.service}
+                      onChange={handle}
+                    >
+                      <option value="">Select a service…</option>
+                      <option>Residential Design</option>
+                      <option>Commercial Design</option>
+                      <option>Hospitality Project</option>
+                      <option>Renovation</option>
+                      <option>Consultation</option>
+                    </select>
+                  </div>
+
+                  <div className="cp-field full">
+                    <label>Your Message</label>
+                    <textarea
+                      name="message"
+                      rows="5"
+                      value={form.message}
+                      onChange={handle}
+                      placeholder="Tell us about your project, timeline, and budget…"
+                    />
+                  </div>
+                </div>
+
+                <div className="cp-submit-row">
+                  <p className="cp-submit-note">
+                    <Lock size={11} /> Your information is private &amp; secure.
+                  </p>
+                  <button
+                    type="submit"
+                    className={`cp-submit-btn${sent ? " sent" : ""}`}
+                  >
+                    {sent ? (
+                      <>
+                        <CheckCircle size={14} /> Message Sent
+                      </>
+                    ) : (
+                      <>
+                        <Send size={13} /> Send Message
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Map Card */}
+            <div className="cp-map-card">
+              <div className="cp-map-header">
+                <h4>
+                  <MapPin size={15} /> Our Location
+                </h4>
+                <a
+                  className="cp-map-link"
+                  href="https://maps.google.com/?q=Krishna+Nagar,+Delhi,+India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open in Maps <ExternalLink size={10} />
+                </a>
+              </div>
+              <iframe
+                className="cp-map-embed"
+                title="Office Location"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14004.07!2d77.2795!3d28.6448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb4e0b000001%3A0x1234abcd!2sKrishna+Nagar%2C+Delhi!5e0!3m2!1sen!2sin!4v1680000000000"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── SUCCESS TOAST ── */}
+      {toast && (
+        <div className="cp-toast">
+          <CheckCircle size={15} color="#1db9af" />
+          Message received! We'll be in touch soon.
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Contact;
