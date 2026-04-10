@@ -145,14 +145,14 @@ export default function DecorHeader() {
 
             <div className="dh-icons">
               <a
-                href="tel:+911234567890"
+                href="tel:+919953493794"
                 className="dh-icon-btn"
                 aria-label="Call us"
               >
                 <PhoneIcon />
               </a>
               <a
-                href="https://wa.me/911234567890"
+                href="https://wa.me/+919953493794"
                 target="_blank"
                 rel="noreferrer"
                 className="dh-icon-btn dh-whatsapp"
