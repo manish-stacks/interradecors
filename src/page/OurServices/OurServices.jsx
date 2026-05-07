@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import "./OurServicesSection.css";
+import TrustSection from "../../components/WhyTrust/Trustsection";
 
 /* ── DATA ── */
 const services = [
@@ -118,38 +119,9 @@ const OurServices = () => {
             </div>
           ))}
         </div>
-
-        {/* ── BOTTOM BAND ── */}
-        <div className="oss__band mb-12">
-
-          {/* Ghost text */}
-          <div className="oss__band-ghost" aria-hidden="true">
-            Everything
-          </div>
-
-          {/* Left */}
-          <div className="oss__band-left">
-            <div className="oss__band-icon">
-              <Layers size={22} />
-            </div>
-            <div className="oss__band-tagline">
-              From Selection to <em>Installation</em> —<br />
-              We Manage Everything.
-            </div>
-          </div>
-
-          {/* Right */}
-          <div className="oss__band-right">
-            <span className="oss__band-pill">End-to-End</span>
-            <span className="oss__band-pill">On-Time Delivery</span>
-            <a href="#contact" className="oss__band-btn">
-              <Phone size={12} /> Get in Touch
-            </a>
-          </div>
-
-        </div>
-
       </section>
+
+      <TrustSection />
     </>
   );
 };

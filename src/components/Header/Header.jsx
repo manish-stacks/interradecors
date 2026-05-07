@@ -50,7 +50,7 @@ const primaryNav = [
     href: "/about",
   },
   {
-    title: "Products",
+    title: "Shop Now",
     href: "/all-products",
   },
   {

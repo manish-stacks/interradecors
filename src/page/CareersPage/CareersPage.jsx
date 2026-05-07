@@ -1,16 +1,16 @@
 import React from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
-import BlogSection from "../../components/BlogSection/BlogSection";
 import TrustSection from "../../components/WhyTrust/Trustsection";
+import Careers from "../../components/Careers/Careers";
 
-const Blog = () => {
+const CareersPage = () => {
   return (
     <>
       <Breadcrumb />
-      <BlogSection />
+      <Careers />
       <TrustSection />
     </>
   );
 };
 
-export default Blog;
+export default CareersPage;

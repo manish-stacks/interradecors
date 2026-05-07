@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
+import TrustSection from "../../components/WhyTrust/Trustsection";
 
 
 const Projects = () => {
@@ -11,6 +12,7 @@ const Projects = () => {
           Not  <span className="oss__title-stroke">Listing</span>
         </h2>
       </section>
+      <TrustSection />
     </>
   );
 };

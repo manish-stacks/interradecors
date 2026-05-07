@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import "./Contact.css";
+import TrustSection from "../../components/WhyTrust/Trustsection";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -257,6 +258,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <TrustSection />
 
       {/* ── SUCCESS TOAST ── */}
       {toast && (
