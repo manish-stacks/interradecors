@@ -6,118 +6,108 @@ import {
   Wrench,
   HeartHandshake,
   ArrowUpRight,
-  Layers,
-  Phone,
 } from "lucide-react";
+
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
-import "./OurServicesSection.css";
 import TrustSection from "../../components/WhyTrust/Trustsection";
 
-/* ── DATA ── */
+import "./OurServicesSection.css";
+
+/* IMAGES */
+import service1 from "/src/assets/services/01.jpg";
+import service2 from "/src/assets/services/02.jpg";
+import service3 from "/src/assets/services/03.jpg";
+import service4 from "/src/assets/services/04.jpg";
+import service5 from "/src/assets/services/05.jpg";
+
+/* DATA */
 const services = [
   {
-    icon: <Ruler size={20} />,
+    icon: <Ruler size={30} />,
     title: "Site Measurement",
-    desc: "Accurate on-site measurements to ensure a perfect fit and flawless installation for every space.",
+    desc: "Our expert team conducts precise on-site measurements to ensure every furnishing element fits perfectly within your space. From curtains and blinds to furniture layouts, we focus on accuracy, functionality, and seamless execution to achieve a refined and luxurious interior finish tailored to your project requirements.",
+    image: service1,
   },
+
   {
-    icon: <Palette size={20} />,
+    icon: <Palette size={30} />,
     title: "Customization as per Design",
-    desc: "Tailor-made furnishing solutions designed to match your space, style, and specific requirements.",
+    desc: "We create tailor-made furnishing solutions designed to complement your interior style, preferences, and space planning. From fabrics and textures to colors and layouts, every detail is customized with precision, ensuring your interiors reflect sophistication, comfort, elegance, and a unique personalized design experience.",
+    image: service2,
   },
+
   {
-    icon: <PackageOpen size={20} />,
+    icon: <PackageOpen size={30} />,
     title: "Bulk Project Supply",
-    desc: "Reliable and efficient supply for large-scale residential, commercial, and hospitality projects.",
+    desc: "Our large-scale furnishing supply solutions are ideal for residential, commercial, hospitality, and builder projects. We ensure consistent product quality, timely delivery, and smooth coordination for bulk requirements, helping clients execute projects efficiently while maintaining premium standards across every furnishing category and interior segment.",
+    image: service3,
   },
+
   {
-    icon: <Wrench size={20} />,
+    icon: <Wrench size={30} />,
     title: "Installation Support",
-    desc: "Professional installation services to ensure a smooth and perfect finish.",
+    desc: "Our professional installation team ensures every furnishing element is installed with precision, safety, and attention to detail. From curtains and blinds to flooring and wall coverings, we provide seamless installation services that enhance aesthetics, functionality, durability, and the overall luxury finish of your interiors.",
+    image: service4,
   },
+
   {
-    icon: <HeartHandshake size={20} />,
+    icon: <HeartHandshake size={30} />,
     title: "After-Sales Service",
-    desc: "Dedicated support and assistance even after project completion for long-term satisfaction.",
+    desc: "We believe in building long-term relationships through dependable after-sales support and customer assistance. Our dedicated team remains available for maintenance guidance, service support, and furnishing-related assistance even after project completion, ensuring lasting satisfaction, comfort, trust, and a smooth post-installation experience for every client.",
+    image: service5,
   },
 ];
 
-/* ── COMPONENT ── */
 const OurServices = () => {
   return (
     <>
       <Breadcrumb />
 
-      <section className="oss max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-
-        {/* ── INTRO ── */}
-        <div className="oss__intro">
-
-          {/* Left vertical bar */}
-          <div className="oss__intro-bar" />
-
-          {/* Title block */}
-          <div className="oss__intro-body">
-            <span className="oss__label">What We Offer</span>
-            <h2 className="oss__title">
-              Complete<br />
-              <span className="oss__title-stroke">Furnishing</span><br />
-              <span className="oss__title-accent">Services</span>
+      <section className="zig-services">
+        <div className="zig-container">
+          {/* TOP HEADING */}
+          <div class="zig-trust-header">
+            <span class="zig-eyebrow zig-eyebrow-center">Our Services</span>
+            <h2 class="zig-heading zig-heading-center">
+              Premium <em>Furnishing.</em>
             </h2>
-          </div>
-
-          {/* Right desc + stats */}
-          <div className="oss__intro-right">
-            <p className="oss__desc">
-              We provide end-to-end furnishing services with a professional
-              and hassle-free approach, ensuring every project is executed
-              with precision, quality, and timely delivery.
+            <p class="zig-trust-sub">
+              From concept to completion, we provide complete furnishing
+              solutions designed to elevate interiors with elegance, precision,
+              and modern functionality.
             </p>
-
-            <div className="oss__stats">
-              <div className="oss__stat">
-                <div className="oss__stat-n">5<sup>+</sup></div>
-                <div className="oss__stat-l">Core Services</div>
-              </div>
-              <div className="oss__stat">
-                <div className="oss__stat-n">500<sup>+</sup></div>
-                <div className="oss__stat-l">Projects Done</div>
-              </div>
-              <div className="oss__stat">
-                <div className="oss__stat-n">10<sup>+</sup></div>
-                <div className="oss__stat-l">Years Exp.</div>
-              </div>
-            </div>
           </div>
 
-        </div>
-
-        {/* ── SERVICE LIST ── */}
-        <div className="oss__list">
-          {services.map((svc, i) => (
-            <div className="oss__item" key={i}>
-
-              {/* Index */}
-              <span className="oss__item-index">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-
-              {/* Body */}
-              <div className="oss__item-body">
-                <div className="oss__item-top">
-                  <div className="oss__item-icon">{svc.icon}</div>
-                  <h3 className="oss__item-title">{svc.title}</h3>
+          {/* ZIG ZAG LIST */}
+          <div className="zig-wrapper">
+            {services.map((service, index) => (
+              <div
+                className={`zig-item ${index % 2 !== 0 ? "reverse" : ""}`}
+                key={index}
+              >
+                {/* IMAGE */}
+                <div className="zig-image">
+                  <img src={service.image} alt={service.title} />
                 </div>
-                <p className="oss__item-desc">{svc.desc}</p>
-              </div>
 
-              {/* Arrow */}
-              <div className="oss__item-arrow">
-                <ArrowUpRight size={18} />
-              </div>
+                {/* CONTENT */}
+                <div className="zig-content">
+                  <div className="zig-number">0{index + 1}</div>
 
-            </div>
-          ))}
+                  <div className="zig-icon">{service.icon}</div>
+
+                  <h3>{service.title}</h3>
+
+                  <p>{service.desc}</p>
+
+                  <button className="zig-btn">
+                    Learn More
+                    <ArrowUpRight size={18} />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -236,8 +236,8 @@ const clients = [
 const stats = [
   { value: "500+", label: "Projects Delivered" },
   { value: "12+", label: "Years of Experience" },
-  { value: "98%", label: "Repeat Client Rate" },
-  { value: "200+", label: "Vendor Partners" },
+  { value: "95%", label: "Happy Customers" },
+  { value: "50+", label: "Vendor Partners" },
 ];
 
 export default function TrustSection() {

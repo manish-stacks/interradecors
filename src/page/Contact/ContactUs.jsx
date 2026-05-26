@@ -102,7 +102,7 @@ const Contact = () => {
             </div>
 
             {/* Working Hours Card */}
-            <div className="cp-hours-card">
+            {/* <div className="cp-hours-card">
               <h4>
                 <Clock size={15} /> Working Hours
               </h4>
@@ -118,7 +118,7 @@ const Contact = () => {
                 <strong>Sunday</strong>
                 <span>By Appointment</span>
               </div>
-            </div>
+            </div> */}
 
             {/* Social Card */}
             <div className="cp-social-card">

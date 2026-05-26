@@ -396,6 +396,7 @@
 .dh-logo-img {
     height: clamp(30px, 5vw, 60px);
     width: auto;
+    padding: 8px 0;
 }
 
 /* ════════════════════════════════════════════

@@ -42,7 +42,7 @@
 }
 
 /* Overlay — darker at top for header readability */
-.dhr-overlay {
+ .dhr-overlay {
   position: absolute;
   inset: 0;
   background:

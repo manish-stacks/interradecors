@@ -1,6 +1,6 @@
 import React from "react";
 import "./introduction.css";
-import { Link } from "react-router-dom";
+import { Link,useLocation  } from "react-router-dom";
 
 import About01 from "../../assets/about-us-1.png"
 import About02 from "../../assets/about-us-2.png"
@@ -19,6 +19,7 @@ const highlights = [
 ];
 
 export default function IntroductionSection() {
+  const location = useLocation();
   return (
     <section className="intro-root">
       {/* decorative background elements */}
@@ -132,7 +133,11 @@ export default function IntroductionSection() {
                 </svg>
               </span>
             </Link>
-            <Link to="about" className="intro-btn-ghost">Explore More</Link>
+            {location.pathname !== "/about" && (
+          <Link to="/about" className="intro-btn-ghost">
+            Explore More
+          </Link>
+        )}
           </div>
         </div>
       </div>

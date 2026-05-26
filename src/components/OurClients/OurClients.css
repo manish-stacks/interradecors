@@ -31,6 +31,7 @@
     overflow: hidden;
     border-radius: 0;
     /* set to 24px if used as a card */
+    padding: 80px 40px;
 }
 
 /* ── Floating orbs ── */
@@ -111,7 +112,9 @@
 .oc-left-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(145deg, #1a1814 55%, #2c2318 100%);
+    /* background: linear-gradient(145deg, #1a1814 55%, #2c2318 100%); */
+        /* background: linear-gradient(145deg, #7f5614 55%, #7a4f0a 100%); */
+            background: linear-gradient(145deg, #fafaf8 55%, #fafaf8 100%);
     z-index: 0;
 }
 
@@ -182,17 +185,18 @@
 /* ── Stacked image cards ── */
 .oc-stack {
     position: relative;
-    width: 240px;
-    height: 330px;
+    width: 350px;
+    height: 500px;
     z-index: 1;
+    top: 10px;
 }
 
 .oc-card {
     position: absolute;
     top: 0;
     left: 0;
-    width: 210px;
-    height: 350px;
+    width: 310px;
+    height: 500px;
     border-radius: 20px;
     overflow: hidden;
     border: 1.5px solid rgb(255, 255, 255);

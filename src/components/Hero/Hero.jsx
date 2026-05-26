@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import "./hero.css";
 import { Link } from "react-router-dom";
-import banner01 from "../../assets/banner/banner-upholstery.webp"
-import banner02 from "../../assets/banner/banner-bed-bath-linens.webp"
+// import banner01 from "../../assets/banner/banner-upholstery.webp"
+import banner01 from "../../assets/banner/banner.jpg"
+import banner02 from "../../assets/banner/banner2.jpg"
+// import banner02 from "../../assets/banner/banner-bed-bath-linens.webp"
 import banner03 from "../../assets/banner/banner-03.webp"
 import banner04 from "../../assets/banner/banner-04.webp"
 

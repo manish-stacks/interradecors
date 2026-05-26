@@ -19,7 +19,7 @@ const Home = () => {
       <TrustSection />
       <CallToAction />
       <OurClients />
-      <BlogSection />
+      {/* <BlogSection /> */}
     </div>
   );
 };
