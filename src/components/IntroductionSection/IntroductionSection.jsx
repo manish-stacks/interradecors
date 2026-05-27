@@ -6,9 +6,9 @@ import About01 from "../../assets/about-us-1.png"
 import About02 from "../../assets/about-us-2.png"
 
 const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "500+", label: "Projects Delivered" },
-  { value: "200+", label: "Happy Clients" },
+  { value: "12+", label: "Years Experience" },
+  { value: "300+", label: "Projects Delivered" },
+  { value: "95%", label: "Happy Customer" },
 ];
 
 const highlights = [
@@ -40,10 +40,10 @@ export default function IntroductionSection() {
             <div className="intro-img-overlay" />
 
             {/* Gold tag on image */}
-            <div className="intro-img-tag">
-              <span className="intro-img-tag-big">10+</span>
+            {/* <div className="intro-img-tag">
+              <span className="intro-img-tag-big">12+</span>
               <span className="intro-img-tag-small">Years of Excellence</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Accent image — offset bottom right */}

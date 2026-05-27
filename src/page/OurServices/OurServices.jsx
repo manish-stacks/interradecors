@@ -100,10 +100,10 @@ const OurServices = () => {
 
                   <p>{service.desc}</p>
 
-                  <button className="zig-btn">
+                  {/* <button className="zig-btn">
                     Learn More
                     <ArrowUpRight size={18} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}

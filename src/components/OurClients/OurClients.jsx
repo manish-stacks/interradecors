@@ -287,7 +287,7 @@ const OurClients = () => {
       <div className="oc-right">
         <p className="oc-eyebrow">
           <span className="oc-eyebrow__line" aria-hidden="true" />
-          Trusted By The Finest
+          Trusted by Homeowners
         </p>
 
         <h2 className="oc-title">

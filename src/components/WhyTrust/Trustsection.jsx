@@ -234,7 +234,7 @@ const clients = [
 ];
 
 const stats = [
-  { value: "500+", label: "Projects Delivered" },
+  { value: "300+", label: "Projects Delivered" },
   { value: "12+", label: "Years of Experience" },
   { value: "95%", label: "Happy Customers" },
   { value: "50+", label: "Vendor Partners" },

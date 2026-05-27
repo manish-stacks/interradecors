@@ -21,8 +21,13 @@ const navLinks = {
     { name: "Curtains", path: "/all-products" },
     { name: "Upholstery", path: "/all-products" },
     { name: "Blinds & Curtain Tracks", path: "/all-products" },
+    { name: "Wallpaper", path: "/all-products" },
     { name: "Bed & Bath Linens", path: "/all-products" },
     { name: "Mattresses", path: "/all-products" },
+    { name: "Motorized & Automation Solutions", path: "/all-products" },
+    { name: "Rugs & Carpets", path: "/all-products" },
+    { name: "Wooden Flooring", path: "/all-products" },
+    { name: "Wall-to-Wall Carpets", path: "/all-products" },
   ],
   Support: [
     { name: "Book a Meeting", path: "/book-a-meeting" },

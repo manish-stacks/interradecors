@@ -4,6 +4,7 @@ import TrustSection from "../../components/WhyTrust/Trustsection";
 
 import "./WorkProcessPageSection.css";
 import { Link } from "react-router-dom";
+import consultancyImg from "../../assets/banner/why-consultancy.jpg";
 
 const WorkProcess = () => {
   return (
@@ -89,7 +90,7 @@ const WorkProcess = () => {
                   />
                 </svg>
               </Link>
-{/* 
+              {/* 
               <Link to="/about" className="lux-btn-text">
                 <span>Learn More</span>
               </Link> */}
@@ -101,10 +102,16 @@ const WorkProcess = () => {
             <div className="lux-image-composition">
               {/* Main Canvas Frame */}
               <div className="lux-frame main-frame">
-                <img
+                {
+                  /* <img 
                   src="src/assets/banner/why-consultancy.jpg"
                   alt="Professional Consultancy Services"
-                />
+                /> */
+                  <img
+                    src={consultancyImg}
+                    alt="Professional Consultancy Services"
+                  />
+                }
                 <div className="lux-overlay-shimmer"></div>
               </div>
 
@@ -118,7 +125,7 @@ const WorkProcess = () => {
               <div className="lux-stat-card">
                 <div className="lux-stat-header">
                   <span className="lux-stat-title">Successful Projects</span>
-                  <span className="lux-stat-number">500+</span>
+                  <span className="lux-stat-number">300+</span>
                 </div>
 
                 <p className="lux-stat-caption">
