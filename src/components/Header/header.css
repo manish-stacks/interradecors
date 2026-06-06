@@ -29,7 +29,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
-    height: 85px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -394,7 +394,7 @@
 }
 
 .dh-logo-img {
-    height: clamp(30px, 5vw, 60px);
+    height: clamp(45px, 5vw, 70px);
     width: auto;
     padding: 8px 0;
 }

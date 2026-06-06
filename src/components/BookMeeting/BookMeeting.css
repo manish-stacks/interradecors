@@ -6,7 +6,7 @@
 }
 
 .bm-container {
-    max-width: 800px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -35,7 +35,7 @@
 
 .bm-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     gap: 16px;
 }
 

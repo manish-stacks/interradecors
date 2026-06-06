@@ -261,7 +261,7 @@ export default function CallToAction() {
                     </div>
                     <div className="cta-contact-body">
                       <span className="cta-contact-label">Call Us</span>
-                      <span className="cta-contact-value">+91 98765 43210</span>
+                      <span className="cta-contact-value"> <a href="tel:+919953493794">+91 9953493794</a></span>
                     </div>
                   </div>
 
@@ -289,7 +289,7 @@ export default function CallToAction() {
                     <div className="cta-contact-body">
                       <span className="cta-contact-label">Email Us</span>
                       <span className="cta-contact-value">
-                        info@interradecors.com
+                       <a href="mailto:info@interradecors.com">info@interradecors.com</a> 
                       </span>
                     </div>
                   </div>
@@ -315,7 +315,7 @@ export default function CallToAction() {
                     <div className="cta-contact-body">
                       <span className="cta-contact-label">Visit Us</span>
                       <span className="cta-contact-value">
-                        Pitampura, New Delhi
+                        Shop No. 129, 1st Floor, Jmd Suburbio, 67, Badshahpur Sohna Rd, Sector 67, Gurugram, Haryana 122101
                       </span>
                     </div>
                   </div>

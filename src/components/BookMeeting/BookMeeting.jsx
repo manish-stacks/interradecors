@@ -150,7 +150,7 @@ const BookMeeting = () => {
                 </div>
 
                 {/* MESSAGE */}
-                <div className="bm-field full">
+                {/* <div className="bm-field full">
                   <label>
                     <MessageSquare size={14} />
                     Message
@@ -162,7 +162,7 @@ const BookMeeting = () => {
                     onChange={handle}
                     placeholder="Describe your requirement..."
                   />
-                </div>
+                </div> */}
               </div>
 
               {/* BUTTON */}

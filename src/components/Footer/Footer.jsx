@@ -296,7 +296,7 @@ export default function Footer() {
 
             {/* Contact quick info */}
             <div className="ft-contact-list">
-              <a href="tel:+919212623753" className="ft-contact-row">
+              <a href="tel:+919953493794" className="ft-contact-row">
                 <span className="ft-contact-ic">
                   <svg viewBox="0 0 16 16" fill="none">
                     <path
@@ -307,7 +307,7 @@ export default function Footer() {
                     />
                   </svg>
                 </span>
-                +91 9212623753 / 9953493794
+                +91 9953493794
               </a>
               <a
                 href="mailto:info@interradecors.com"
@@ -351,8 +351,7 @@ export default function Footer() {
                     />
                   </svg>
                 </span>
-                Plot no 7A, Flat no 101, 1st Floor, Urban Estate, Sec-4,
-                Gurugram- 122001
+                Shop No. 129, 1st Floor, Jmd Suburbio, 67, Badshahpur Sohna Rd, Sector 67, Gurugram, Haryana 122101
               </span>
             </div>
 
